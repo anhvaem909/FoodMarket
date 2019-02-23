@@ -1,0 +1,30 @@
+- Mô tả hoạt động của hệ thống mà dự án sẽ được ứng dụng
+  Phần mềm quản lý siêu thị thực phẩm Fivimart sẽ cung cấp cho khách hàng những phương thức quản lý siêu thị một cách hiệu quả nhất về phương diện : Lưu trữ, tra cứu và thống kê. Cụ thể, phần mềm cần đáp ứng những yêu cầu của khách hàng đã nêu ở trên :
+	Quản lý kho hàng
+	Quản lý giao dịch 
+	Quản lý nhà cung ứng 
+	Báo cáo, thống kê dữ liệu của siêu thị.
+- Phạm vi dự án được ứng dụng: trong khu vực  
+- Đối tượng sử dụng:
+•	Khách hàng lân cận có nhu cầu mua sản phẩm
+- Quy trình xử lý của hệ thống
+	Quản lí giao dịch mua bán :
+o	Khi khách hàng chọn lựa sản phẩm xong và submit yêu cầu mua hàng lên hệ thống. Nhân viên bán hàng tiến hàng kiểm tra lại đơn hàng có hợp lệ không và có còn đủ nông sản trong hệ thống cho đơn hàng. Tiếp đó liên lạc ( gọi điện, chat ) với khách hàng để xác nhận đơn hàng gồm chốt hình thức thanh toán ( online hay trực tiếp), thời gian và địa điểm giao hàng. 
+o	Khi khách hàng đồng ý mua hàng, nhân viên tiến hành lập  hóa đơn cho khách và phiếu xuất hàng  gửi xuống bộ phận kho.
+o	Cập nhật lại thông tin đơn hàng vào hệ thống cơ sở dữ liệu.
+	Quản lí kho nông sản:
+o	Nhân viên kho tiến hàng kiểm tra số lượng và chất lượng nông sản trong kho. Sau đó lập phiếu kiểm kê.
+o	Căn cứ vào tình hình thực tế và kế hoạch mà lập phiếu yêu cầu nhập nông sản từ nhà cung cấp, phân phối.
+o	Khi có nông sản bị hỏng, tiến hành xử lý ( tiêu hủy …) và lập phiếu hủy nông sản.
+o	Khi nhà cung cấp giao nông sản đến, nhân viên nhập hàng tiếp nhận và kiểm tra nông sản theo đúng hóa đơn mua và đối chiếu thông tin từ nhà cung cấp. Nếu có phát sinh xảy ra thì phải báo cáo lại với quản lý để giải quyết kịp thời với nhà cung cấp. Tiếp theo, tiến hành lập phiếu xác nhận nhập hàng.
+o	Khi có yêu cầu xuất hàng giao cho khách, nhân viên tiến hành kiểm tra đối chiếu lại mặt hàng trong đơn hàng. Sau đó tiến hành đóng gói nông sản và gửi nhân viên giao hàng hoặc đơn vị vận chuyển để giao cho khách.
+o	Cập nhật dữ liệu vào cơ sở dữ liệu hệ thống.
+	Quản lí tin học và website : 
+o	Tiến hành xây dựng qui trình nghiệp vụ và thực hiện đào tạo việc sử dụng, vận hành hệ thống cho các nhân viên trong hệ thống theo định kì hoặc yêu cầu. 
+o	Khi có nhân viên mới hay thay đổi nhân sự tiến hành cập nhật lại trong hệ thống ( phân quyền, sửa đổi thông tin ….). 
+o	Theo định kì hay đột xuất có yêu cầu báo cáo thống kê về hệ thống, nhân viên tin học tiến hành trích xuất dữ liệu hay lập báo cáo, thống kê theo yêu cầu ( báo cáo tình hình mua bán, báo cáo hàng tồn, thông tin chi tiết các thực thể trong hệ thống …) một cách tự động hay thủ công tùy yêu cầu.
+-	Các quy tắc quản lý của hệ thống :
+•	Nhanh chóng, chính xác,kịp thời xử lý các vấn đề phát sinh với hệ thống.
+•	 Đơn giản, thân thiện cho người dùng ( khách hàng, nhân viên, quản lý …).
+•	Sự hài lòng của khách hàng và chất lượng nông sản là mục tiêu hàng đầu.
+•	Thông tin  nông sản cần rõ rang, chính xác, minh bạch, cập nhật hàng ngày.
