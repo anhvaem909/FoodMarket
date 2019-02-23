@@ -1,0 +1,20 @@
+-Mục đích của dự án  :
+FoodMart là một chuỗi các siêu thị chuyênvề thực phẩm, với ưu thế giá rẻ, mặt bằng rộng rãi, FoodMart đang dần thu hút đượcnhiều khách hàng. Hiện nay siêu thị FoodMart đang phát triển ở một quy mô rất lớn dẫnđến các nhu cầu xử lý dữ liệu thông tin hàng hóa cũng như chế độ an ninh, bảo mậttăng cao. Phần mềm quản lý siêu thị thực phẩm FoodMart ra đời nhằm đáp ứng phầnnào mong muốn đó, đồng thời cũng cung cấp thêm một số tính năng khác như quản lýnhân sự, lập báo cáo doanh thu … Thời gian hoàn thành dự án ước tính khoảng 2
+tháng
+- Các chức năng trong hệ thống:
+•	Quản lý nông sản .
+•	Quản lý mua bán nông sản.
+•	Quản lý khách hàng mua nông sản.
+-Tên hệ thống : Quản lý siêu thị bán hàng nông sản 
+- Môi trường triển khai (phần cứng, phần mềm)  
+	Phần cứng
+•	1 PC bộ phận kho
+•	1 Máy chủ
+•	1 PC bộ phận bán hàng
+•	Máy in
+•	Mạng cục bộ hoặc internet
+	Phần mềm :
+•	Hệ điều hành: Microsoft Windows 7 trở lên.
+•	Microsoft SQL server 2014: để lưu trữ dữ liệu
+•	Trình duyệt Web: Hiển thị giao diện và thực hiện các thao tác nghiệp vụ
+•	Unikey: đảm bảo phông chữ không bị lỗi khi sử dụng phần mềm.
