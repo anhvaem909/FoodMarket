@@ -1,0 +1,226 @@
+CREATE Database FoodMarket
+Go 
+USE [FoodMarket]
+GO
+/****** Object:  Table [dbo].[Categories]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Categories](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](250) NULL,
+	[IdGroup] [int] NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Contact]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Contact](
+	[ID] [int] NOT NULL,
+	[Name] [nchar](10) NULL,
+	[Email] [nchar](50) NULL,
+	[Message] [nchar](500) NULL,
+ CONSTRAINT [PK_Contact] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Customer]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Customer](
+	[Username] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NULL,
+	[FullName] [nvarchar](50) NULL,
+	[Email] [nchar](250) NULL,
+	[Address] [nvarchar](250) NULL,
+	[Phone] [nvarchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Username] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Group]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Group](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](250) NULL,
+ CONSTRAINT [PK_Group] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[OrderDetail]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[OrderDetail](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdProduct] [int] NULL,
+	[IdOrder] [int] NULL,
+	[Quantity] [int] NULL,
+	[Amount] [float] NULL,
+ CONSTRAINT [PK_OrderDetail] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Orders]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Orders](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Customer] [nvarchar](50) NULL,
+	[OrderDate] [date] NULL,
+	[Receiver] [nvarchar](50) NULL,
+	[Address] [nvarchar](250) NULL,
+	[Amount] [float] NULL,
+	[Phone] [nvarchar](50) NULL,
+	[Email] [nvarchar](250) NULL,
+	[TinhTrang] [int] NULL,
+ CONSTRAINT [PK_Order] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Product]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Product](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NULL,
+	[Description] [nvarchar](3000) NULL,
+	[UnitPrice] [float] NULL,
+	[Image] [nvarchar](250) NULL,
+	[DateProduct] [date] NULL,
+	[IdCategories] [int] NULL,
+	[IdSuppnier] [int] NULL,
+	[Size] [char](10) NULL,
+	[Quantity] [int] NULL,
+	[SaleOff] [float] NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Reviews]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Reviews](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ProductID] [int] NULL,
+	[Username] [nvarchar](50) NULL,
+	[Status] [nvarchar](200) NULL,
+	[date] [date] NULL,
+ CONSTRAINT [PK_Reviews] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Role]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Role](
+	[ID] [int] NOT NULL,
+	[Name] [nvarchar](10) NULL,
+ CONSTRAINT [PK_Role] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Slide]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Slide](
+	[ID] [int] NOT NULL,
+	[Image] [nvarchar](250) NULL,
+	[DisplayOrder] [int] NULL,
+	[Link] [nvarchar](250) NULL,
+	[Description] [nvarchar](500) NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_Slide] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Suppliers]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Suppliers](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](250) NULL,
+	[Logo] [nvarchar](250) NULL,
+	[Email] [nvarchar](250) NULL,
+	[Phone] [nvarchar](250) NULL,
+ CONSTRAINT [PK_Suppliers] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[UserInRole]    Script Date: 12/18/2018 7:34:54 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserInRole](
+	[ID] [int] NOT NULL,
+	[UserName] [nvarchar](50) NOT NULL,
+	[IDRole] [int] NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_UserInRole] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
